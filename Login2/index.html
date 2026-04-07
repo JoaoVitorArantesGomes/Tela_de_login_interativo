@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- 🔧 CONFIGURAÇÕES BÁSICAS -->
+    <meta charset="UTF-8">              <!-- ✅ Suporte a acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 📱 Responsivo mobile -->
+    <link rel="stylesheet" href="style.css"> <!-- 🎨 Carrega CSS -->
+    <title>TELA DE LOGIN</title>        <!-- 📄 Título da aba -->
+</head>
+
+<body>
+    <!-- 🏠 CONTAINER PRINCIPAL (centraliza tudo) -->
+    <div class="pagina">
+        <!-- ❌ ERRO: countainer → container -->
+        <div class="countainer"> <!-- 👈 CORRIJA PRA "container" -->
+            
+            <!-- 🃏 CARD BRANCO (fundo + sombra) -->
+            <div class="card">
+                
+                <!-- 🎯 SEÇÃO LOGIN (título + formulários) -->
+                <div class="login">
+                    
+                    <!-- 📝 TÍTULO PRINCIPAL -->
+                    <h1>Login</h1>
+
+                    <!-- 🔘 ABAS (botões que trocam formulários) -->
+                    <div class="abas">
+                        <button class="aba ativa" id="btnLogin">Login</button>     <!-- ✅ Ativa por padrão -->
+                        <button class="aba" id="btnCadastro">Cadastro</button>     <!-- ⏳ Espera clique -->
+                    </div>
+                    
+                    <!-- 📋 FORMULÁRIO LOGIN (visível por padrão) -->
+                    <div class="formulario" id="formLogin">
+                        <div class="campo">
+                            <input type="email" id="email" placeholder="E-mail" required> <!-- ✅ required = valida nativo -->
+                        </div>
+                        <div class="campo">
+                            <input type="password" id="senha" placeholder="Senha" required> <!-- ✅ required -->
+                        </div>
+                        <a href="#" class="link-esqueci">Esqueceu a senha?</a> <!-- 🔗 Link (JS vai usar) -->
+                        <button class="btn-entrar">Entrar</button>              <!-- 🎮 Botão login -->
+                        <p class="rodape">
+                             Não tem conta? <a href="#">Crie agora</a>          <!-- 🔗 Vai pra cadastro -->
+                        </p>
+                    </div>
+                    
+                    <!-- 📋 FORMULÁRIO CADASTRO (escondido inicialmente) -->
+                    <div class="formulario" id="formCadastro" style="display: none;">
+                        <!-- 📄 FORM nativo (submit + validação) -->
+                        <form id="formCad">
+                            <div class="campo">
+                                <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+                            </div>
+                            <div class="campo">
+                                <input type="email" name="email" id="emailCad" placeholder="E-mail" required>
+                            </div>
+                            <div class="campo">
+                                <input type="password" name="senha" id="senhaCad" placeholder="Senha" required>
+                            </div>
+                            <div class="campo">
+                                <input type="password" name="confSenha" id="confSenha" placeholder="Confirme a senha" required>
+                            </div>
+                            <button type="submit" class="btn-entrar">Cadastrar</button> <!-- 🎮 Submit nativo -->
+                        </form>
+                        
+                        <!-- 🔗 LINK VOLTA LOGIN -->
+                        <p class="rodape">
+                            Já tem conta? <a href="#" id="linkLogin">Entre agora</a> <!-- ✅ ID pro JS -->
+                        </p>
+                    </div>
+                </div> <!-- Fim login -->
+            </div>   <!-- Fim card -->
+        </div>     <!-- Fim container -->
+    </div>       <!-- Fim pagina -->
+
+    <!-- ⚡ CARREGA JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
