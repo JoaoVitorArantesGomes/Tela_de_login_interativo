@@ -74,3 +74,12 @@ document.getElementById('formCad').addEventListener('submit', (e) => {
     
     alert(`Cadastro: ${nome} ✅\nEmail: ${email}`);
 });
+// 👉 BOTÃO ENTRAR
+document.querySelector(".btn-entrar").addEventListener("click", function() {
+    
+    // Esconde login
+    document.querySelector(".pagina").style.display = "none";
+    
+    // Mostra loja
+    document.getElementById("loja").style.display = "block";
+});
